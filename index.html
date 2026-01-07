@@ -19,6 +19,7 @@
     </style>
       <!-- Tvoj CSS za grid -->
     <style>
+        /* Video */
         .video-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr); /* 3 videa u redu */
@@ -29,6 +30,13 @@
         .video-grid iframe {
           width: 100%;
           aspect-ratio: 16 / 9;
+        }
+
+        /* Slike */
+        .media-grid img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 6px;
         }
     </style>
 </head>
@@ -44,6 +52,10 @@
   <iframe src="https://www.youtube.com/embed/N2MxC0ZyTCI" allowfullscreen></iframe>
   <iframe src="https://www.youtube.com/embed/9qGDVtu0auc" allowfullscreen></iframe>
   <iframe src="https://www.youtube.com/embed/Zyz0-RzGjYM" allowfullscreen></iframe>
+
+  <img src="slike/slika1.jpg" alt="PLC4ALL_Cipele.jpg" class="horizontal">
+  <img src="slike/slika2.jpg" alt="PLC4ALL_S5_to_S7.jpg" class="horizontal">
+    
 </div>
     
 </body>
