@@ -8,7 +8,10 @@
             font-family: Arial, sans-serif;
             background: #f4f4f4;
             text-align: center;
-            padding: 50px;
+            /* padding: 50px; */
+            margin: 0;
+            padding: 20px;   /* manje, bez horizontalnog skrola */
+            box-sizing: border-box;
         }
         h1 {
             color: #333;
@@ -22,14 +25,24 @@
         /* Video */
         .video-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr); /* 3 videa u redu */
+          /* grid-template-columns: repeat(3, 1fr); 3 videa u redu */
+          /* gap: 20px; */
+          /* padding: 20px; */
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));   /* 3 videa u redu */
           gap: 20px;
-          padding: 20px;
+          padding: 0;          /* padding već ima body */
+          max-width: 1200px;   /* lep izgled na velikom ekranu */
+          margin: 0 auto;      /* centriranje */
         }
     
-        .video-grid iframe {
+        /* .video-grid iframe { */
+          /* width: 100%; */
+          /* aspect-ratio: 16 / 9; */
+        /* } */
+        .video-grid iframe,
+        .video-grid img {
           width: 100%;
-          aspect-ratio: 16 / 9;
+          max-width: 100%;
         }
 
         /* Slike */
