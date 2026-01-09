@@ -49,6 +49,7 @@
         }
         
         /* Slike */
+        /* Slika u jednom redu */
         .full-width-image {
           width: 100%;
           margin-top: 30px;   /* razmak od videa */
@@ -59,7 +60,35 @@
           height: auto;
           display: block;     /* uklanja razmak ispod slike */
         }
+        /* ----------------- */
         
+        /* Dve slike u jednom redu */  
+        .image-row {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+          margin-top: 30px;   /* razmak od full-width slike */
+        }
+        
+        .image-row img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        
+        .image-row figure {
+          margin: 0;
+        }
+        
+        .image-row figcaption {
+          margin-top: 8px;
+          font-size: 0.9rem;
+          color: #555;
+          text-align: center;
+        }
+        /* ----------------- */
+
+        /* Ne koristi se */
         .media-grid img {
           width: 100%;
           object-fit: cover;
@@ -106,9 +135,16 @@
   <img src="slike/EKRANI.jpg" alt="SCADA in Energo Zelena">
 </div>
 
-<div class="videos landscape">
-  <img src="slike/PLC4ALL_Cipele.jpg" alt="Shoe machine" class="horizontal">
-  <img src="slike/PLC4ALL_S5_to_S7.jpg" alt="PLC and HMI migration from S5 to S7" class="horizontal">
+<div class="image-row">
+  <figure>
+    <img src="slike/PLC4ALL_S5_to_S7.jpg" alt="">
+    <figcaption>PLC and HMI migration from S5 to S7" class="horizontal</figcaption>
+  </figure>
+
+  <figure>
+    <img src="slike/PLC4ALL_Cipele.jpg" alt="">
+    <figcaption>Shoe machine</figcaption>
+  </figure>
 </div>
    
 </body>
