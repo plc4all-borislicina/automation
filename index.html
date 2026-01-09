@@ -49,6 +49,17 @@
         }
         
         /* Slike */
+        .full-width-image {
+          width: 100%;
+          margin-top: 30px;   /* razmak od videa */
+        }
+        
+        .full-width-image img {
+          width: 100%;
+          height: auto;
+          display: block;     /* uklanja razmak ispod slike */
+        }
+        
         .media-grid img {
           width: 100%;
           object-fit: cover;
@@ -91,6 +102,10 @@
   <iframe src="https://www.youtube.com/embed/9qGDVtu0auc" allowfullscreen></iframe>
 </div>
 
+<div class="full-width-image">
+  <img src="EKRANI.jpg" alt="SCADA in Energo Zelena">
+</div>
+    
 <div class="videos landscape">
   <img src="slike/PLC4ALL_Cipele.jpg" alt="PLC4ALL_Cipele" class="horizontal">
   <img src="slike/PLC4ALL_S5_to_S7.jpg" alt="PLC4ALL_S5_to_S7" class="horizontal">
